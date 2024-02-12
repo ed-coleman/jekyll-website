@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Site Name</title>
+    <!-- Add your CSS files here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- FontAwesome for icons (if needed) -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+          <button id="menu-btn">menu</button>
+          <div id="menu-items" class="menu-hidden">
+            <a href="/home">home</a>
+            <a href="/about">about</a>
+            <a href="/services">services</a>
+            <a href="/contact">contact</a>
+          </div>
+        </nav>
+      </header>
+      
+      <!-- Main Content Area -->
+      <div class="content-area">
+    
+{{ content }}
+
+          <div class="footer-line"></div>
+          <!-- Social Media Links -->
+          <div class="social-media-links">
+              <a href="https://google.com" target="_blank">
+                  <img src="/assets/images/iconmonstr-email-11.png" alt="Email icon">
+              </a>
+              <a href="https://instagram.com" target="_blank">
+                  <img src="/assets/images/iconmonstr-instagram-11.png" alt="Instagram icon">
+              </a>
+              <a href="https://facebook.com" target="_blank">
+                  <img src="/assets/images/iconmonstr-facebook-messenger-5.png" alt="Facebook icon">
+              </a>
+             
+          </div>
+      
+         
+      
+      
+       
+      </div>
+      
+
+    <!-- Footer -->
+    <footer style="font-family: AktivGrotesk-Thin;">
+      <p>&copy; 2024 C&F LTD. All rights reserved.</p>
+    </footer>
+
+    <!-- Add your JavaScript files here -->
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+    var menu = document.getElementById('menu-items');
+    console.log('menu button clicked')
+    menu.classList.toggle('menu-visible');
+    console.log("menu visible class toggled")
+
+});
+      </script>
+  </body>
+</html>

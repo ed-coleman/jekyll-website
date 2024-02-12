@@ -1,0 +1,484 @@
+/* Basic Reset */
+
+
+  @font-face {
+    font-family: 'Aktiv Grotesk Medium';
+    src: url('/assets/fonts/AktivGrotesk-Medium.ttf'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk Thin';
+    src: url('/assets/fonts/AktivGrotesk-Thin.ttf'), ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Questrial", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0ecd5;
+    background-image: url('/assets/images/textured-plaster-1248-mm-architextures.jpg');
+    
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures the body and html tags span the full width */
+    overflow-x: hidden; /* Prevents horizontal scrolling caused by overflow */
+}
+
+
+
+.logo {
+    float: left;
+    margin-left: 20px;
+}
+
+/* Hero Section */
+.hero {
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* Example shadow */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Sets the width to 100% of the viewport width */
+    text-align: center; /* Centers the text within the section */
+    z-index: 2; /* Ensures it's above other content */
+    pointer-events: none; /* Allows interaction with content below */
+    /* Other styles like background, padding, etc. */
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Services Section */
+#services .service-item {
+    width: 30%;
+    display: inline-block;
+    margin: 20px;
+}
+
+#services i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #0779e4;
+}
+
+/* Portfolio Section */
+#portfolio {
+    background-color: #f4f4f4;
+}
+
+/* Testimonials Section */
+#testimonials blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    width: 50%;
+}
+
+/* Footer */
+footer {
+    font-family: 'AktivGrotesk-Medium';
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Utility Classes */
+.btn {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.image-text-section {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spaces out the text and image */
+    padding: 20px; /* Adds some spacing around the content */
+    gap: 20px; /* Adds space between the text box and image box */
+}
+
+.text-box {
+    flex: 1; /* Allows the text box to grow and fill the space */
+    padding-right: 20px; /* Adds spacing to the right of the text */
+}
+
+.image-box {
+    flex: 1; /* Allows the image box to grow and fill the space */
+}
+
+.image-box img {
+    width: 100%; /* Makes the image fully responsive within its container */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
+
+@media (max-width: 768px) {
+    .image-text-section {
+        flex-direction: column; /* Stacks the flex items vertically */
+    }
+
+    .text-box {
+        padding-right: 0; /* Removes the right padding on smaller screens */
+    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.hero {
+    position: fixed; /* Fix the text in place */
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for precise centering */
+    z-index: 2; /* Ensure it's above the content */
+    color: #000; /* Text color */
+    font-size: 2em; /* Adjust text size as needed */
+    pointer-events: none; /* Allows clicks to pass through to content below */
+}
+
+.main-content {
+    position: relative;
+    z-index: 1; /* Ensures content scrolls behind the text */
+    padding: 100vh 0; /* Adds space before and after the scrolling content */
+    background-image: url('./images/stlenoard1.jpeg'); /* Optional: Background image for scrolling content */
+    background-attachment: fixed; /* Optional: Keeps the background fixed */
+    background-size: cover; /* Optional: Cover the entire background */
+}
+
+.hero h2 {
+    width: 100%; /* Ensures the text container spans the full width */
+    margin: 0 auto; /* Centers the text block if needed */
+    padding: 0 20px; /* Adds some padding on the sides to ensure text doesn't touch the screen edges */
+    font-size: 12vw; /* Adjusts the font size relative to the viewport width */
+    font-weight: 100;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Hides any overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows (optional) */
+    text-align: center; /* Centers the text horizontally */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif; /* Feel free to choose your font */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: transparent;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.content-area {
+    width: 60%;
+    margin: 100px auto 0; /* Adjust top margin as needed */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-area h2 {
+    font-family: 'AktivGrotesk-Medium'
+}
+
+.text-section h1, .text-section p {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 40px; /* Spacing before images */
+}
+
+.cta-button:hover {
+    background-color: #98FF98; /* Darker shade on hover */
+    color: black;
+}
+
+.cta-button:active {
+    color: white;
+}
+
+
+.image-section img {
+    width: 70%;
+    height: 50%;
+    display: block; /* Ensures images take up the full container width */
+}
+
+/* Last image should not have margin-bottom */
+.image-section img {
+    display: block;
+    margin: 0 auto; /* Removes default margins and centers the image */
+    padding: 0; /* Resets any padding */
+}
+
+
+
+.content-area h1 {
+    position: fixed;
+    top: 30px; /* Adjust this value based on your navbar's height */
+    left: 30px;
+    margin: 0;
+    z-index: 10; /* Ensure it's above the content but can be below or above the navbar based on your design */
+    background-color: transparent;
+    color: #98FF98; /* Adjust color as needed */
+    font-size: 80px; /* Adjust size as needed */
+    font-family: 'Aktiv Grotesk Medium';
+    font-weight:bolder;
+    
+}
+
+.content-area p {
+    font-family: 'Aktiv Grotesk Thin';
+    font-weight: lighter;
+    font-size: 25px;
+    font: black;
+    padding: 0px;
+    margin: 2px;
+}
+
+.content-area button {
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+
+#menu-btn {
+
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+}
+
+#menu-items {
+  position: absolute;
+  top: 100%; /* Position it right below the button */
+  width: 200px; /* Adjust as needed */
+ 
+}
+
+.menu-hidden {
+    opacity: 0%; 
+    transform: translateX(100%); /* Hide off-screen to the right */
+    transition: transform 0.1s ease; /* Smooth slide-in effect */
+}
+
+.menu-visible {
+    transform: translateX(0);
+    opacity: 100%;
+}
+
+#menu-items a {
+  display: block; /* Each link takes up its own line */
+padding: 5px;
+padding-bottom: 45px;
+  color: black; /* Adjust as needed */
+  text-decoration: none; /* Removes underline */
+  font-size: 45px;
+  text-align: right;
+}
+
+#menu-items a:hover {
+  color: #98FF98; /* Light grey background on hover */
+}
+
+#menu-items a:active {
+    
+    color: black; /* Light grey background on hover */
+  }
+
+  .footer-line {
+    width: 95%; /* Slightly less wide than the content area */
+    height: 1px; /* Thickness of the line */
+    background-color: black; /* Color of the line */
+    margin: 0 auto 20px; /* Centered horizontally, with some space at the bottom */
+}
+
+.social-media-links {
+    text-align: right; /* Aligns the links to the right */
+    padding: 15px 0; /* Adds some padding above and below the links */
+}
+
+.social-media-links a {
+    margin: 0 10px; /* Adds some space between the icons */
+    display: inline-block; /* Displays links in a row */
+    vertical-align: middle; /* Aligns icons vertically */
+}
+
+.social-media-links img {
+    width: 30px; /* Adjust the size of the icons as needed */
+    height: auto; /* Keeps the aspect ratio of the icons */
+}
+
+.price-list {
+    max-width: 800px; /* Adjust based on your content area width */
+    margin: 0 auto; /* Center the section */
+}
+
+.price-list h2 {
+    font-family: 'AktivGrotesk-Medium';;
+    
+}
+
+.price-list h3 {
+    font-family: 'AktivGrotesk-Medium';
+    padding-bottom: 15px;
+}
+.price-list p {
+    font-size: large;
+}
+
+.service {
+    display: flex;
+    text-align: left;
+    justify-content: space-between; /* Space between service description and price */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space between each service */
+    padding: 10px;
+}
+
+.service > div {
+    flex-grow: 1; /* Allows the description to take up the available space */
+}
+
+.price {
+    flex-basis: 100px; /* Adjust the width of the price column */
+    text-align: center; /* Aligns the price text to the right */
+    font-weight: bolder; /* Makes the price stand out */
+}
+
+.service-btn {
+    padding: 8px 1px 8px 1px; /* Adjust padding to fit your design */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 12px; /* Adjust font size as needed */
+    margin-left: auto; /* Pushes the button to the right */
+    display: block; /* Ensure the button is on a new line */
+    text-align: center; /* Center the text inside the button */
+    white-space: nowrap; /* Prevents the text from wrapping onto the next line */
+    min-width: 130px; /* Ensures a minimum width for the button */
+    overflow: hidden; /* Prevents content from spilling outside */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows (unlikely with short text like 'Book Now') */
+}
+
+.service-btn:hover {
+    background-color: #98FF98; /* Darker shade for hover effect */
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.contact-section p {
+    padding-bottom: 10px;
+}
+
+.map-text-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px; /* Spacing between the map-text area and the full-width text */
+}
+
+.map, .text-area {
+    flex: 1; /* Makes the map and text area each take up half of the container */
+}
+
+.map img {
+    width: 100%; /* Ensures the image fills the container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.text-area {
+    padding-left: 20px; /* Adds some space between the text area and the map */
+}
+
+.full-width-text {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .map-text-container {
+        flex-direction: column;
+    }
+
+    .text-area {
+        padding-left: 0; /* Removes the left padding on smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Additional styles for the content and background */
+
+
+
+
